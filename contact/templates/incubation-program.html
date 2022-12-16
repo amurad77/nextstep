@@ -1,0 +1,186 @@
+
+{% extends "base.html" %}
+
+{% load static %}
+
+
+    {% block content %}
+
+    <main>
+        <section class="banner">
+            <div class="container">
+                <p>The Incubation program by Next Step Innovation Center is designed to support start-upsand companies from concept to development of a workable demo (A Minimum ViableProduct).</p>
+            </div>
+        </section>
+
+        <section class="container trainers">
+            <h2>Trainers</h2>
+            <div class="row">
+
+
+
+                {% for i in trainers %}
+
+                <div class="col-4">
+                    <a href="#">
+                        <div class="mentor-box">
+                            <div class="mentor-img" style="background-image: url('{{ i.image.url }}');"></div>
+                            <div class="mentor-desc">
+                                <div>
+                                    <p class="mentor-name">{{i.name}}</p>
+                                    <p class="mentor-title">{{i.work}}</p>
+                                </div>
+                                <a href="{{i.linkedin_link}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+
+
+
+            </div>
+        </section>
+
+        <section class="container mentors">
+            <h2>Mentors</h2>
+            <div class="row">
+
+
+
+                {% for i in mentors %}
+
+                <div class="col-4">
+                    <a href="#">
+                        <div class="mentor-box">
+                            <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
+                            <div class="mentor-desc">
+                                <div>
+                                    <p class="mentor-name">{{i.name}}</p>
+                                    <p class="mentor-title">{{i.work}}</p>
+
+                                </div>
+                                <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+
+
+
+
+            </div>
+        </section>
+
+        <section class="container incubation-body">
+            <h2>Eligibility</h2>
+            <ul>
+                <li>Startups and spin-offs that develop their activity, directly or indirectly, within the scope of AgriTech, EdTech,FinTech,GameTech, FemTech, HealthTech, TravelTech, Cultural and Creative Industries, Green Economy,or Information and Communication Technologies, Cloud Computing, SaaS technology, E-Commerce areconsidered eligible for this.</li>
+                <li>Startups have a business mission to be developed. Startups will have to have up to a maximum of 6months of activity to be considered under the incubation program.</li>
+                <li>All candidate projects are analyzed individually, considering the framing of Next Step Innovation Center'sstrategic areas, the capacity of the team to pursue the objectives that the project proposes to develop,and the potential of the idea to be realized.</li>
+                <li>Applicant startup teams will be considered according to how much time team members are able to sparefor the development of the idea.</li>
+                <li>Professional Working Proficiency level of English Language at least founders.</li>
+            </ul>
+        </section>
+
+        <section class="about services">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Technical Services</h4>
+                    </div>
+                    <div class="col-6">
+                        <h4>Startup Development Services</h4>
+                    </div>
+                </div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td scope="row">Dedicated space, phone boxes</td>
+                            <td>Access to the startup events for networking and matching</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Co-working office</td>
+                            <td>Weekly trainings for startup development</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Access to printer and scanner</td>
+                            <td>Access to the events to publicize the activity, products, andservices of companies</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Meeting and training room/video projector</td>
+                            <td>Have training and mentoring from Azerbaijan Tech Diasporamembers and startup founders, Foreign innovation experts, andlocal ecosystem players.</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Coffee break space and limitless tea</td>
+                            <td>Monthly monitoring of the startup</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Maintenance and technical<br>management of offices, spaces, and equipment</td>
+                            <td>Advisory support and legal support</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Hygiene and safety at work services</td>
+                            <td>Hygiene and safety at work services</td>
+                        </tr>
+                        <tr>
+                            <td scope="row"></td>
+                            <td>Support in the definition of the business model and plan</td>
+                        </tr>
+                        <tr>
+                            <td scope="row"></td>
+                            <td>Organizing a demoday to connect with investors and financialentities</td>
+                        </tr>
+                        <tr>
+                            <td scope="row"></td>
+                            <td>AWS-10000$</td>
+                        </tr>
+                        <tr>
+                            <td scope="row"></td>
+                            <td>Segment-50000$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="container application-form">
+            <h2>Application Form</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name and Surname">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Your e-mail">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Telephone">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Project Name">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Project Description" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Team Members" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="What stage was the project currently in progress?" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <p>Presentation/Pitchdeck</p>
+                    <input type="file">
+                </div>
+                <div class="group">
+                    <button class="btn-blue" type="submit">Send a message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+  {% endblock %}

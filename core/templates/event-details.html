@@ -1,0 +1,86 @@
+
+{% extends "base.html" %}
+
+{% load static %}
+
+
+    {% block content %}
+
+    <main id="event-details">
+        <section class="banner">
+            <div class="container">
+                <h2>HACK COVID-19: sign up now for global hackathon !</h2>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="event-details-body">
+                <img src="{% static 'img/news1.png' %}" alt="News 1">
+                <p>Tech activists across the world are invited to take part in ‘HACK COVID-19’, a Global Virtual Hackathon to be held on April 10-12. The hackathon is organised with the support  of the Ministry of Transport, Communications and High Technologies of the Republic of Azerbaijan, the United Nations Development Programme, and the SUP.VC Acceleration Center.</p>
+                <p>The purpose of the Global Virtual Hackathon competition is to combine technological solutions to combat the coronavirus pandemic (COVID-19).</p>
+                <p><b>Here are some of the key challenges to solve together:</b></p>
+                <ol>
+                    <li>Supporting the most vulnerable and at-risk people</li>
+                    <li>Tech and health</li>
+                    <li>Support to SMEs</li>
+                    <li>Physical distancing and social connectedness</li>
+                    <li>Improving awareness and behavior and getting public advice</li>
+                    <li>Tech and education</li>
+                    <li>Tech and engineering</li>
+                    <li>Tech for everyday lives</li>
+                </ol>
+                <p>The objective is to create an environment in which people can organise their work in the virtual world, learn, build a network, bridge the gap between trade relations, identify existing potential and get real results.</p>
+                <p>Registration for the competition, the official language of which is English, starts today. Participants must register at www.hackcov19.com. The deadline for registration will end on April 9, 2020, at 21:00 Baku time.</p>
+                <p>The winner will receive $5,000, second place – $3,000, and third place – $2,000. Prizes will be transferred to the winners’ bank accounts.</p>
+            </div>
+        </section>
+
+        <section class="container other-events">
+            <div class="row">
+                <div class="col-4">
+                    <a href="event-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('{% static 'img/news1.png' %}');"></div>
+                            <div class="news-body">
+                                <p class="news-date">APR <span>3</span></p>
+                                <div>
+                                    <p class="news-title">HACK COVID-19: sign up now for global hackathon !</p>
+                                    <p class="news-desc">Tech activists across the world are invited to take part in.....</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="event-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('{% static 'img/news1.png' %}');"></div>
+                            <div class="news-body">
+                                <p class="news-date">APR <span>3</span></p>
+                                <div>
+                                    <p class="news-title">HACK COVID-19: sign up now for global hackathon !</p>
+                                    <p class="news-desc">Tech activists across the world are invited to take part in.....</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="event-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('{% static 'img/news1.png' %}');"></div>
+                            <div class="news-body">
+                                <p class="news-date">APR <span>3</span></p>
+                                <div>
+                                    <p class="news-title">HACK COVID-19: sign up now for global hackathon !</p>
+                                    <p class="news-desc">Tech activists across the world are invited to take part in.....</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}

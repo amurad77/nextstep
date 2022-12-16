@@ -1,0 +1,765 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+html {
+    font-size: 10px;
+}
+
+/**************** GENERAL CSS ****************/
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+   margin: 0; 
+   padding: 0;
+   list-style: none;
+}
+
+.btn-orange {
+    width: max-content;
+    padding: 12px 15px;
+    border-radius: 4px;
+    background-color: #FF9A00;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+    transition: 0.5s;
+}
+.btn-orange:hover {
+    background-color: #FFFFFF;
+    color: #FF9A00;
+}
+
+.btn-blue {
+    display: inline-block;
+    width: 180px;
+    padding: 10px 0;
+    border: 2px solid #0B315E;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    letter-spacing: 0.1em;
+    background-color: #FFFFFF;
+    color: #0B315E;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.btn-blue:hover {
+    background-color: #0B315E;
+    color: #FFFFFF;
+}
+
+/**************** NAVBAR ****************/
+header {
+    height: 110px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 25px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.1rem;
+    color: #0B315E;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    color: inherit;
+    transition: 0.5s;
+}
+nav ul li a:hover {
+    color: #FF9A00;
+    text-decoration: underline;
+}
+
+
+
+/**************** FOOTER ****************/
+footer {
+    background-color: #0B315E;
+    color: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+footer h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+footer ul li {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+}
+footer ul li a.email {
+    text-decoration: underline;
+}
+footer i {
+    font-size: 2.8rem;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+footer .copyright {
+    margin-top: 80px;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.52);
+}
+
+
+
+/**************** BANNER SECTION ****************/
+.banner img {
+    width: 100%;
+    margin-bottom: 70px;
+}
+.banner h2 {
+    padding: 65px 0;
+    color: #FF9A00;
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 7rem;
+    letter-spacing: 0.05em;
+}
+.banner p {
+    width: 75%;
+    padding: 80px 0;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 4rem;
+    letter-spacing: 0.05em;
+    color: #0B315E;
+}
+
+
+
+/**************** HOME PAGE ****************/
+.banner.home {
+    position: relative;
+}
+.banner.home img {
+    margin: 0;
+}
+.banner.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(6, 32, 48, 0.61);
+    mix-blend-mode: multiply;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 2;
+}
+.banner.home .banner-text > div {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 4;
+}
+.banner.home .banner-text p {
+    color: #FF9A00;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+}
+.banner.home .banner-text h1 {
+    color: #FFFFFF;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 12rem;
+    margin: 15px 0 50px;
+}
+
+
+main {
+    position: relative;
+    margin-top: 110px;
+}
+main::after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    right: 80px;
+    background: url('../img/icons/bg-arrows.svg');
+    background-repeat: repeat-y;
+    z-index: -1;
+    opacity: 80%;
+}
+
+.partners {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.partners > div {
+    text-align: center;
+}
+.partners .img {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 0 auto 10px;
+    border: 1px solid #0B315E;
+    border-radius: 50%;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.partners .img img {
+    width: 100%;
+}
+.partners > div:hover .img {
+    background-color: #0B315E;
+}
+.partners h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #0B315E;
+}
+
+.about {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 30px 0 70px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.13);
+}
+.about h2,
+.founders h2,
+.events h2,
+.mentors h2,
+.trainers h2,
+.incubation-body h2,
+.application-form h2,
+.contact h2 {
+    font-size: 7rem;
+    font-weight: 700;
+    color: #FF9A00;
+    margin-bottom: 30px;
+}
+.about p {
+    width: 85%;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-align: justify;
+}
+.about .col-6:last-child {
+    display: flex;
+    align-items: flex-end;
+}
+.about .col-6:last-child img {
+    width: 80%;
+    border-radius: 13px;
+}
+
+.events,
+.mentors,
+.trainers {
+    padding-bottom: 100px;
+}
+.events h2,
+.mentors h2,
+.trainers h2,
+.contact h2 {
+    margin-bottom: 50px;
+}
+.events > div:first-child,
+.mentors > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.events > div:first-child a,
+.mentors > div:first-child a {
+    margin-right: 50px;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #0B315E;
+    transition: 0.5s;
+}
+.events > div:first-child a:hover,
+.mentors > div:first-child a:hover {
+    color: #FF9A00;
+}
+
+.mentors .col-4,
+.trainers .col-4 {
+    margin-bottom: 50px;
+}
+.mentor-box {
+    transition: 0.5s;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+.mentor-box:hover {
+    box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 10%), 0px 4px 6px -2px rgb(0 0 0 / 5%);
+}
+.mentor-box:hover .mentor-desc a i {
+    opacity: 1;
+}
+.mentor-box .mentor-img {
+    background-color: #E2E8F0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 7px 7px 0px 0px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+.mentor-box .mentor-desc {
+    background-color: #FFFFFF;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mentor-box .mentor-name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 0.05em;
+    color: #0B315E;
+    margin-bottom: 10px;
+}
+.mentor-box .mentor-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    letter-spacing: 0.05em;
+    color: #0B315E;
+}
+.mentor-box .mentor-desc a i {
+    font-size: 2.4rem;
+    color: #0B315E;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+
+/**************** INCTUBATION PROGRAM PAGE ****************/
+.incubation-body {
+    padding-bottom: 40px;
+}
+.incubation-body ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+.incubation-body ul li {
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.05em;
+    color: #0B315E;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.trainers .mentor-box .mentor-desc a i {
+    opacity: 1;
+}
+
+.about.services .col-6 {
+    display: block;
+}
+.about.services h4 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 5rem;
+    color: #FC682B;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+.about.services td {
+    width: 50%;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #0B315E;
+    letter-spacing: 0.05em;
+    padding: 15px 0;
+    border-bottom: 1px solid #a0a0a0;
+}
+.about.services td:nth-child(1) {
+    padding-right: 15px;
+}
+.about.services td:nth-child(2) {
+    padding-left: 15px;
+}
+
+.application-form form {
+    padding: 20px 0 100px;
+}
+.application-form .form-group {
+    display: inline-block;
+    width: 48%;
+    margin-bottom: 35px;
+    padding-right: 20px;
+}
+.application-form .form-group input,
+.application-form .form-group textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border: 2px solid rgba(217, 217, 217, 0.7);
+    border-radius: 5px;
+    padding: 14px 20px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    resize: none;
+    transition: 0.5s;
+}
+.application-form .form-group input:focus,
+.application-form .form-group textarea:focus {
+    border-color: #0B315E;
+}
+.application-form .form-group input:focus-visible,
+.application-form .form-group textarea:focus-visible {
+    outline: 0;
+}
+.application-form .btn-blue {
+    background-color: #0B315E;
+    color: #FFFFFF;
+    text-transform: none;
+}
+
+
+
+/**************** SINGLE MENTOR PAGE ****************/
+#single-mentor .mentors {
+    padding-top: 120px;
+}
+.single-mentor {
+    margin-bottom: 150px;
+}
+.single-mentor img {
+    width: 100%;
+}
+.single-mentor h3 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: #0B315E;
+    letter-spacing: 0.05em;
+    margin: 30px 0 15px;
+}
+.single-mentor p {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+
+
+/**************** ABOUT US PAGE ****************/
+#about-us .director {
+    padding: 60px 0 100px;
+}
+#about-us .about img,
+#about-us .director img {
+    width: 80%;
+}
+#about-us .about .row,
+#about-us .director .row {
+    align-items: center;
+}
+#about-us .about p,
+#about-us .director p {
+    width: 85%;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: justify;
+}
+#about-us .name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#about-us .director .name h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FF9A00;
+    letter-spacing: 0.05em;
+    margin-right: 15px;
+}
+#about-us .director .link i {
+    font-size: 2.4rem;
+    color: #0B315E;
+}
+#about-us .director p.title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #0B315E;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.founders {
+    padding: 40px 0 200px;
+}
+.founders .mentor-box,
+.founders .mentor-box:hover {
+    box-shadow: 0px 4px 25px 0px rgb(0 0 0 / 25%);
+    border-radius: 15px;
+    height: min-content;
+}
+.founders .mentor-box .mentor-img {
+    border-radius: 15px 15px 0 0;
+}
+.founders .mentor-box .mentor-desc {
+    border-radius: 15px;
+}
+.founders .mentor-box .mentor-desc a i {
+    opacity: 1;
+}
+.founders .btn-blue {
+    margin-top: 40px;
+}
+
+.founders .modal-content {
+    padding: 10px;
+}
+.founders .modal-header {
+    border-bottom: 0;
+    font-size: 1.8rem;
+}
+.founders .modal-header button {
+    align-self: flex-start;
+}
+.founders .modal-header img {
+    width: 100%;
+}
+.founders .modal-header .mentor-name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 0.05em;
+    color: #0B315E;
+    margin-bottom: 10px;
+}
+.founders .modal-header .mentor-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    letter-spacing: 0.05em;
+    color: #0B315E;
+    margin-bottom: 20px;
+}
+.founders .modal-header .social-media i {
+    font-size: 2.4rem;
+    color: #0B315E;
+}
+.founders .modal-body {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.03em;
+    color: #000000;
+    text-align: justify;
+}
+
+
+/**************** EVENTS PAGE ****************/
+.news-box {
+    border: 1px solid #0B315E;
+    border-radius: 19px 19px 4px 4px;
+    transition: 0.5s;
+}
+.news-box:hover {
+    border-color: transparent;
+    box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 10%), 0px 4px 6px -2px rgb(0 0 0 / 5%);
+}
+.news-box .news-img {
+    background-color: #E2E8F0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 19px 19px 0 0;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 210px;
+}
+.news-box .news-body {
+    padding: 24px;
+    display: flex;
+    background-color: #fff;
+}
+.news-box .news-date {
+    width: 30px;
+    margin-right: 24px;
+    color: #0B315E;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+.news-box .news-date span {
+    color: #FF9A00;
+    font-size: 3rem;
+    line-height: 3.7rem;
+}
+.news-box .news-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin-bottom: 16px;
+}
+.news-box .news-desc {
+    color: #C0C0C0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+}
+
+
+
+/**************** EVENT DETAILS PAGE ****************/
+#event-details .banner h2 {
+    width: 80%;
+}
+.event-details-body {
+    width: 75%;
+}
+.event-details-body img {
+    width: 100%;
+    margin-top: -30px;
+}
+.event-details-body p {
+    margin-bottom: 22px;
+    color: #0B315E;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+}
+.event-details-body p:nth-child(2) {
+    margin-top: 33px;
+}
+.event-details-body ol,
+.event-details-body ul {
+    margin: 30px 0;
+    color: #FF9A00;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+}
+
+.other-events {
+    padding: 120px 0;
+}
+
+
+
+/**************** PAGINATION ****************/
+.pagination {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.pagination ul {
+    margin: 0 auto;
+    line-height: 4rem;
+}
+.pagination ul li {
+    display: inline-block;
+    margin: 0 3px;
+    font-size: 1.4rem !important;
+    line-height: 2rem !important;
+    color: #0F172A;
+}
+.pagination ul li.arrow {
+    font-size: 1.6rem;
+}
+.pagination ul li.arrow a {
+    padding: 10px;
+    color: #0B315E;
+}
+.pagination ul li.active a {
+    background: #EEF2FF;
+    color: #0B315E;
+    border: 1px solid #0B315E;
+    border-radius: 24px;
+    cursor: pointer;
+}
+.pagination ul li a {
+    padding: 10px 16px;
+    color: inherit;
+}
+
+
+
+/**************** CONTACT PAGE ****************/
+.contact {
+    padding-top: 120px;
+}
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 35px;
+    border: 2px solid rgba(217, 217, 217, 0.7);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.contact textarea {
+    height: 157px;
+    resize: none;
+}
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #0B315E;
+}
+.contact input:focus-visible,
+.contact textarea:focus-visible {
+    outline: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height:300px;
+    margin: 90px 0;
+}

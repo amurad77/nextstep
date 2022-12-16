@@ -1,0 +1,174 @@
+
+
+{% extends "base.html" %}
+
+{% load static %}
+
+
+    {% block content %}
+
+    <main id="about-us">
+        <section class="banner">
+            <img src="{% static 'img/about-banner.png' %}" alt="News banner image">
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <h2>About The Company</h2>
+                        <img src="{% static 'img/aboutus-section.png' %}" alt="About Us">
+                    </div>
+                    <div class="col-7">
+                        <p>Next Step Innovation Center is designed to support start-ups and companies from concept to development of a workable demo (A Minimum Viable Product) in the Incubation Program. The company is a Startup Ecosystem supporting all of Azerbaijan and anyone who wants to connect to the Azerbaijani community. We teach best practices to early stage entrepreneurs that have a global vision and are looking to engage and grow together with partners and customers worldwide. Education and Mentorship is at the foundation of our philosophy. We support companies at the Incubation stage and provide funding to companies that graduate from the Incubation Program. For Hardware startups, we may provide a stipend to help build product. NEXT STEP Innovation Center is open to all citizens of our country. If you have original ideas and significant achievements, you are ready to present your products in the global market we will support you and help in the implementation of your projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container director">
+            <div class="row">
+
+
+        {% for i in announcer %}
+                <div class="col-5">
+                    <img src="{{ i.image.url }}" alt="Nazrin Asgarzade">
+                </div>
+                <div class="col-7">
+                    <div class="name">
+                        <h3>{{i.name}}</h3>
+                        <a class="link" href="https://www.linkedin.com/in/nazrinasgarzade/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <p class="title">{{i.work}}</p>
+                    <p> {{i.description}}</p>
+                </div>
+                
+        {% endfor %}
+        
+
+
+            </div>
+        </section>
+
+        <section class="container founders">
+            <h2>Founders</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{% static 'img/elshad-abbasov.png' %}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">Elshad Abbasov</p>
+                                <p class="mentor-title">Co-founder of Next Step Innovation Center</p>
+                            </div>
+                            <a href="#" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/elshadabbasov/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <a class="btn-blue" href="#" data-bs-toggle="modal" data-bs-target="#elshadAbbasov">More</a>
+                </div>
+                <div class="modal fade" id="elshadAbbasov" tabindex="-1" aria-labelledby="elshadAbbasovLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="col-12 col-md-3 my-2">
+                                <img src="{% static 'img/elshad-abbasov.png' %}" alt="Elshad Abbasov">
+                            </div>
+                            <div class="col-12 col-md-5 my-2 ms-5">
+                                <p class="mentor-name">Elshad Abbasov</p>
+                                <p class="mentor-title">Co-founder of Next Step Innovation Center</p>
+                                <div class="social-media">
+                                    <a href="#" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.linkedin.com/in/elshadabbasov/"><i class="fa-brands fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Elshad Abbasov is an entrepreneur who has more than 20 years of experience in management of mid and large size businesses and owns multiple projects in Azerbaijan, Russia, Turkey, Ukraine and Kazakhstan. In 1983 after graduating from Moscow State University he started teaching in the State Oil Academy of Azerbaijan Republic. Since 2010 he is a Chairman of the board of State Attestation Commission for Timber Processing at State University of Architecture and Construction and supports development of scientific research projects, which assists the development of future professionals in Azerbaijan. Today, he enjoys supporting young ambitious talents around the globe, who are willing to innovate, wishing to become leaders in the technology industry. He is also supporting further their unique ideas, in presenting the results of their projects, raising recognition and awareness of their products as the Azerbaijani national brand abroad.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{% static 'img/anar-aligulov.png' %}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">Anar Aligulov</p>
+                                <p class="mentor-title">Co-founder of Next Step Innovation Center</p>
+                            </div>
+                            <a href="https://www.facebook.com/anar.aligulov" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/anar-aligulov-3aabba24/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <a class="btn-blue" href="#" data-bs-toggle="modal" data-bs-target="#anarAligulov">More</a>
+                </div>
+                <div class="modal fade" id="anarAligulov" tabindex="-1" aria-labelledby="anarAligulovLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="col-12 col-md-3 my-2">
+                                <img src="{% static 'img/anar-aligulov.png' %}" alt="Anar Aligulov">
+                            </div>
+                            <div class="col-12 col-md-5 my-2 ms-5">
+                                <p class="mentor-name">Anar Aligulov</p>
+                                <p class="mentor-title">Co-founder of Next Step Innovation Center</p>
+                                <div class="social-media">
+                                    <a href="https://www.facebook.com/anar.aligulov" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.linkedin.com/in/anar-aligulov-3aabba24/"><i class="fa-brands fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Anar is an entrepreneur with a long history of working in the information technology and services industry. He is skilled in Strategic Planning, Executive Leadership, Business Analysis, Telecommunications, and Team Leadership and is London Business School Executive Education Alumnus. Anar has been a member of YPO since 2010 and launched R.I.S.K. company in 1993. Currently, he is CEO of WandaFi Inc.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{% static 'img/mammad-karim.png' %}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">Mammad Karim</p>
+                                <p class="mentor-title">Co-founder, Serial entrepreneur and investor</p>
+                            </div>
+                            <a href="https://www.facebook.com/mammadkarim" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/mammadkarim/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <a class="btn-blue" href="#" data-bs-toggle="modal" data-bs-target="#mammadKarim">More</a>
+                </div>
+                <div class="modal fade" id="mammadKarim" tabindex="-1" aria-labelledby="mammadKarimLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="col-12 col-md-3 my-2">
+                                <img src="{% static 'img/mammad-karim.png' %}" alt="Mammad Karim">
+                            </div>
+                            <div class="col-12 col-md-5 my-2 ms-5">
+                                <p class="mentor-name">Mammad Karim</p>
+                                <p class="mentor-title">Co-founder, Serial entrepreneur and investor</p>
+                                <div class="social-media">
+                                    <a href="https://www.facebook.com/mammadkarim" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.linkedin.com/in/mammadkarim/"><i class="fa-brands fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Mammad Karim is the partner of the investment fund for seed and post seed stage start-ups in the region, Caucasus Ventures. The current portfolio covers start-ups from a number of countries including Turkey, Germany, US and UAE. He has also led an accelerator and incubation program at Innoland for local startups, helping them to grow in Azerbaijan and expand to international markets. Besides his investments Mr Karim co-founded/launched two online media channels and Tech Academy in Azerbaijan. Currently, He is Member of Supervisory Board at eManat and Member of Innovation Advisory Board at Pasha Holding LLC.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+    {% endblock %}
