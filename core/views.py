@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from contact.models import Mentors
-from .models import Events, Announcer
+from .models import Events, Announcer, Mentors, Trainers
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
@@ -45,3 +44,13 @@ def events(request):
 def event_detail(request):
     return render(request, 'event-details.html')
 
+def incubation(request):
+    mentors = Mentors.objects.all().order_by('-id')
+    trainers = Trainers.objects.all()
+
+    context = {
+        'mentors': mentors,
+        'trainers': trainers
+
+    }
+    return render(request, 'incubation-program.html', context)

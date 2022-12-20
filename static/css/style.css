@@ -289,13 +289,15 @@ main::after {
     border-radius: 13px;
 }
 
+.events > div:first-child,
+.mentors > div:first-child {
+    margin-bottom: 30px;
+}
 .events,
 .mentors,
 .trainers {
     padding-bottom: 100px;
 }
-.events h2,
-.mentors h2,
 .trainers h2,
 .contact h2 {
     margin-bottom: 50px;
@@ -429,6 +431,13 @@ main::after {
     padding-left: 15px;
 }
 
+
+
+/**************** APPLY NOW PAGE ****************/
+.application-form {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
 .application-form form {
     padding: 20px 0 100px;
 }
@@ -642,18 +651,20 @@ main::after {
     font-size: 3rem;
     line-height: 3.7rem;
 }
-.news-box .news-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 2.4rem;
-    margin-bottom: 16px;
-}
-.news-box .news-desc {
+.news-box .news-desc p {
     color: #C0C0C0;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 2.1rem;
 }
+.news-box .news-desc .news-title {
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin-bottom: 16px;
+}
+
 
 
 

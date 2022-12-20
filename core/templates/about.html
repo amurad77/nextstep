@@ -1,10 +1,9 @@
 
-
 {% extends "base.html" %}
 
 {% load static %}
 
-
+    {% block title %}About Us | Next Step Innovation Center{% endblock %}
     {% block content %}
 
     <main id="about-us">
@@ -29,8 +28,7 @@
         <section class="container director">
             <div class="row">
 
-
-        {% for i in announcer %}
+            {% for i in announcer %}
                 <div class="col-5">
                     <img src="{{ i.image.url }}" alt="Nazrin Asgarzade">
                 </div>
@@ -43,10 +41,8 @@
                     <p> {{i.description}}</p>
                 </div>
                 
-        {% endfor %}
+            {% endfor %}
         
-
-
             </div>
         </section>
 
@@ -61,7 +57,6 @@
                                 <p class="mentor-name">Elshad Abbasov</p>
                                 <p class="mentor-title">Co-founder of Next Step Innovation Center</p>
                             </div>
-                            <a href="#" class="me-3"><i class="fa-brands fa-facebook"></i></a>
                             <a href="https://www.linkedin.com/in/elshadabbasov/"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
                     </div>
@@ -170,5 +165,4 @@
         </section>
     </main>
 
-   
     {% endblock %}

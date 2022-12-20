@@ -3,7 +3,7 @@
 
 {% load static %}
 
-
+    {% block title %}Home | Next Step Innovation Center{% endblock %}
     {% block content %}
 
     <main>
@@ -11,9 +11,9 @@
             <img src="{% static 'img/home-banner.png' %}" alt="Home banner image">
             <div class="banner-text container">
                 <div>
-                    <p>Welcome to Startup world</p>
+                    <p>Welcome to Startup World</p>
                     <h1>REALISE<br>YOUR IDEA!</h1>
-                    <a class="btn-orange" href="incubation-program.html">Application Form</a>
+                    <a class="btn-orange" href="/incubation-program">Application Form</a>
                 </div>
             </div>
         </section>
@@ -32,10 +32,12 @@
                 <h3>The Incubation</h3>
             </div>
             <div>
-                <div class="img">
-                    <img src="{% static 'img/icons/partners_3.png' %}" alt="Acceleration by Sup.VC">
-                </div>
-                <h3>Acceleration by Sup.VC</h3>
+                <a href="https://sup.vc/" target="_blank">
+                    <div class="img">
+                        <img src="{% static 'img/icons/partners_3.png' %}" alt="Acceleration by Sup.VC">
+                    </div>
+                    <h3>Acceleration by Sup.VC</h3>
+                </a>
             </div>
             <div>
                 <div class="img">
@@ -67,31 +69,22 @@
             </div>
             <div class="row">
 
-
-
-                
                 {% for i in events %}
-
                 <div class="col-4">
                     <a href="event-details.html">
                         <div class="news-box">
                             <div class="news-img" style="background-image: url('{{i.cover_image.url}}');"></div>
                             <div class="news-body">
                                 <p class="news-date">{{i.created_at|date:"M"}} <span>{{i.created_at|date:"d"}}</span></p>
-                                <div>
+                                <div class="news-desc">
                                     <p class="news-title">{{i.title}}</p>
-                                    <p class="news-desc">{{i.description|truncatechars:40}}</p>
+                                    {{i.description|safe|truncatechars:80}}
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-
                 {% endfor %}
-
-
-
-
 
             </div>
         </section>
@@ -103,36 +96,23 @@
             </div>
             <div class="row">
 
-
-
-
-
                 {% for i in mentors %}
-
                 <div class="col-4">
-                    <a href="#">
-                        <div class="mentor-box">
-                            <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
-                            <div class="mentor-desc">
-                                <div>
-                                    <p class="mentor-name">{{i.name}}</p>
-                                    <p class="mentor-title">{{i.work}}</p>
-
-                                </div>
-                                <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">{{i.name}}</p>
+                                <p class="mentor-title">{{i.work}}</p>
                             </div>
+                            <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-
                 {% endfor %}
-
-
-
 
             </div>
         </section>
     </main>
-
 
     {% endblock %}

@@ -3,7 +3,7 @@
 
 {% load static %}
 
-
+    {% block title %}Incubation Program | Next Step Innovation Center{% endblock %}
     {% block content %}
 
     <main>
@@ -17,28 +17,20 @@
             <h2>Trainers</h2>
             <div class="row">
 
-
-
                 {% for i in trainers %}
-
                 <div class="col-4">
-                    <a href="#">
-                        <div class="mentor-box">
-                            <div class="mentor-img" style="background-image: url('{{ i.image.url }}');"></div>
-                            <div class="mentor-desc">
-                                <div>
-                                    <p class="mentor-name">{{i.name}}</p>
-                                    <p class="mentor-title">{{i.work}}</p>
-                                </div>
-                                <a href="{{i.linkedin_link}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{{ i.image.url }}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">{{i.name}}</p>
+                                <p class="mentor-title">{{i.work}}</p>
                             </div>
+                            <a href="{{i.linkedin_link}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-
                 {% endfor %}
-
-
 
             </div>
         </section>
@@ -47,30 +39,20 @@
             <h2>Mentors</h2>
             <div class="row">
 
-
-
                 {% for i in mentors %}
-
                 <div class="col-4">
-                    <a href="#">
-                        <div class="mentor-box">
-                            <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
-                            <div class="mentor-desc">
-                                <div>
-                                    <p class="mentor-name">{{i.name}}</p>
-                                    <p class="mentor-title">{{i.work}}</p>
-
-                                </div>
-                                <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">{{i.name}}</p>
+                                <p class="mentor-title">{{i.work}}</p>
                             </div>
+                            <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-
                 {% endfor %}
-
-
-
 
             </div>
         </section>
@@ -146,40 +128,6 @@
                     </tbody>
                 </table>
             </div>
-        </section>
-
-        <section class="container application-form">
-            <h2>Application Form</h2>
-            <form>
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name and Surname">
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Your e-mail">
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Telephone">
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Project Name">
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Project Description" cols="30" rows="10"></textarea>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Team Members" cols="30" rows="10"></textarea>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="What stage was the project currently in progress?" cols="30" rows="10"></textarea>
-                </div>
-                <div class="form-group">
-                    <p>Presentation/Pitchdeck</p>
-                    <input type="file">
-                </div>
-                <div class="group">
-                    <button class="btn-blue" type="submit">Send a message</button>
-                </div>
-            </form>
         </section>
     </main>
 

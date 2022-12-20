@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import index, events, event_detail, about
+from core.views import index, events, event_detail, about, incubation
 from django.conf import settings
 from django.conf.urls.static import static
-from contact.views import incubation, contact
+from contact.views import contact, apply
 
 
 urlpatterns = [
@@ -29,4 +29,5 @@ urlpatterns = [
     path('incubation-program/', incubation),
     path('about/', about),
     path('contact/', contact),
+    path('apply/', apply),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

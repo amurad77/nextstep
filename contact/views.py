@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect
-from .models import Mentors, Trainers
 from .forms import ContactForm
 from django.contrib import messages
 
@@ -25,14 +24,5 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
-
-def incubation(request):
-    mentors = Mentors.objects.all().order_by('-id')
-    trainers = Trainers.objects.all()
-
-    context = {
-        'mentors': mentors,
-        'trainers': trainers
-
-    }
-    return render(request, 'incubation-program.html', context)
+def apply(request):
+    return render(request, 'apply.html')

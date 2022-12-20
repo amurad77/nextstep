@@ -2,19 +2,16 @@
 
 {% load static %}
 
-
+    {% block title %}Contact | Next Step Innovation Center{% endblock %}
     {% block content %}
-
 
     <main>
         <section class="container contact">
             <h2>Contact Us</h2>
             <form method="post">
-
                 <div class="row">
                     <div class="col-6">
                         {% csrf_token %}
-
                         <!-- <input type="text" name="yourName" id="yourName" placeholder="Your Name" required> -->
                         {{form.name}}
                         <!-- <input type="text" name="yourEmail" id="firstEmail" placeholder="Your Email" required> -->
@@ -30,7 +27,6 @@
                         <button type="submit" class="btn-blue">Send</button>
                     </div>
                     <p class="text-success" style="margin-left: 17px;">{{messages}}</p>
-
                 </div>
             </form>
         </section>
@@ -44,4 +40,4 @@
         </section>
     </main>
 
-{% endblock %}
+    {% endblock %}
