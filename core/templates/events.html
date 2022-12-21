@@ -18,14 +18,14 @@
 
                 {% for i in events %}
                 <div class="col-4">
-                    <a href="event-details.html">
+                    <a href="{{i.get_absolute_url}}">
                         <div class="news-box">
                             <div class="news-img" style="background-image: url('{{i.cover_image.url}}');"></div>
                             <div class="news-body">
                                 <p class="news-date">{{i.created_at|date:"M"}} <span>{{i.created_at|date:"d"}}</span></p>
                                 <div>
                                     <p class="news-title">{{i.title}}</p>
-                                    <p class="news-desc">{{i.description|truncatechars:40}}</p>
+                                    <p class="news-desc">{{i.description|truncatechars:40|safe}}</p>
                                 </div>
                             </div>
                         </div>

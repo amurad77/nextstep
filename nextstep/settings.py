@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vfx&r(5%dnrbyd61&e4z34v4q8tu(wrq5&b^2kn-i14%ex&ov1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -73,21 +73,36 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'nextstep.wsgi.application'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB', 'nextstep'),
+        'USER': os.getenv('POSTGRES_USER', 'nextstep'),
+        'PORT': os.getenv('POSTGRES_PORT', 5432),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'nextstep5719!'),
+        'HOST': os.getenv('POSTGRES_HOST', '127.0.0.1'),
+        'PORT': os.environ.get('POSTGRES_PORT', '5432')
+    }
+    #     'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    }
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 # MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_name',
-        'USER': 'db_user',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        'PORT': 5432
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'db_name',
+#         'USER': 'db_user',
+#         'PASSWORD': '12345',
+#         'HOST': 'localhost',
+#         'PORT': 5432
+#     }
+# }
 
 
 # Password validation

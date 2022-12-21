@@ -9,46 +9,46 @@
     <main>
         <section class="container application-form">
             <h2>Apply Now</h2>
-            <form method="post" enctype="multipart/form-data">
+            <form action="{% url 'fileapp:uploads' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 
                 <div class="form-group">
                     {{form.name_surname}}
-                    <!-- <input type="text" placeholder="Your Name and Surname"> -->
+                    <input type="text" placeholder="Your Name and Surname" name="name">
                 </div>
                 <div class="form-group">
                     {{form.email}}
-                    <!-- <input type="text" placeholder="Your e-mail"> -->
+                    <input type="text" placeholder="Your e-mail" name="mail">
                 </div>
                 <div class="form-group">
                     {{form.number}}
-                    <!-- <input type="text" placeholder="Telephone"> -->
+                    <input type="text" placeholder="Telephone" name="number">
                 </div>
                 <div class="form-group">
                     {{form.project_name}}
-                    <!-- <input type="text" placeholder="Project Name"> -->
+                    <input type="text" placeholder="Project Name" name="project_name">
                 </div>
                 <div class="form-group">
                     {{form.project_des}}
-                    <!-- <textarea placeholder="Project Description" cols="30" rows="10"></textarea> -->
+                    <textarea placeholder="Project Description" cols="30" rows="10" name="project_des"></textarea>
                 </div>
                 <div class="form-group">
                     {{form.team_members}}
-                    <!-- <textarea placeholder="Team Members" cols="30" rows="10"></textarea> -->
+                    <textarea placeholder="Team Members" cols="30" rows="10" name="members"></textarea>
                 </div>
                 <div class="form-group">
                     {{form.project_level}}
-                    <!-- <textarea placeholder="What stage was the project currently in progress?" cols="30" rows="10"></textarea> -->
+                    <textarea placeholder="What stage was the project currently in progress?" cols="30" rows="10" name="what"></textarea>
                 </div>
                 <div class="form-group">
                     <p>Presentation/Pitchdeck</p> 
                     {{form.file}}
-                    <!-- <input type="file"> -->
+                    <input type="file" name="file">
                 </div>
                 <div class="group">
                     <button class="btn-blue" type="submit">Send a message</button>
                 </div>
-                <p class="text-success" style="margin-left: 17px;">{{messages}}</p>
+                <!-- <p class="text-success" style="margin-left: 17px;">{{messages}}</p> -->
             </form>
         </section>
     </main>

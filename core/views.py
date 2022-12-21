@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Events, Announcer, Mentors, Trainers
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import get_object_or_404
+
 
 # Create your views here.
 def index(request):
@@ -41,8 +43,17 @@ def events(request):
     }
     return render(request, 'events.html', context)
 
-def event_detail(request):
-    return render(request, 'event-details.html')
+def event_detail(request, slug):
+    events = get_object_or_404(Events, slug = slug)
+    related_events = Events.objects.exclude(slug=events.slug).order_by('-id')[0:2]
+
+
+    context = {
+        'events' : events,
+        'related_events' : related_events
+    }
+
+    return render(request, 'event-details.html', context)
 
 def incubation(request):
     mentors = Mentors.objects.all().order_by('-id')
