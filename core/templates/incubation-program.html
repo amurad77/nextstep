@@ -7,53 +7,12 @@
     {% block content %}
 
     <main>
-        <section class="banner">
+        <section class="banner incubation-banner">
             <div class="container">
-                <p>The Incubation program by Next Step Innovation Center is designed to support start-upsand companies from concept to development of a workable demo (A Minimum ViableProduct).</p>
-            </div>
-        </section>
-
-        <section class="container trainers">
-            <h2>Trainers</h2>
-            <div class="row">
-
-                {% for i in trainers %}
-                <div class="col-4">
-                    <div class="mentor-box">
-                        <div class="mentor-img" style="background-image: url('{{ i.image.url }}');"></div>
-                        <div class="mentor-desc">
-                            <div>
-                                <p class="mentor-name">{{i.name}}</p>
-                                <p class="mentor-title">{{i.work}}</p>
-                            </div>
-                            <a href="{{i.linkedin_link}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-
-            </div>
-        </section>
-
-        <section class="container mentors">
-            <h2>Mentors</h2>
-            <div class="row">
-
-                {% for i in mentors %}
-                <div class="col-4">
-                    <div class="mentor-box">
-                        <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
-                        <div class="mentor-desc">
-                            <div>
-                                <p class="mentor-name">{{i.name}}</p>
-                                <p class="mentor-title">{{i.work}}</p>
-                            </div>
-                            <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-
+                <h1>STARTUP INCUBATION PROGRAM</h1>
+                <span>deadline: 15 january</span>
+                <a href="/apply" class="btn-blue">Apply</a>
+                <p>The Incubation program by Next Step Innovation Center is designed to support start-upsand companies from concept to development of a workable demo (A Minimum  Viable Product).</p>
             </div>
         </section>
 
@@ -70,7 +29,7 @@
 
         <section class="about services">
             <div class="container">
-                <h2>Services</h2>
+                <h2 class="text-center">Services</h2>
                 <div class="row">
                     <div class="col-6">
                         <h4>Technical Services</h4>
@@ -128,6 +87,54 @@
                     </tbody>
                 </table>
             </div>
+        </section>
+
+        <section class="container trainers">
+            <h2>Trainers</h2>
+            <div class="row">
+
+                {% for i in trainers %}
+                <div class="col-3">
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{{ i.image.url }}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">{{i.name}}</p>
+                                <p class="mentor-title">{{i.work}}</p>
+                            </div>
+                            <a href="{{i.linkedin_link}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+        <section class="container mentors">
+            <h2>Mentors</h2>
+            <div class="row">
+
+                {% for i in mentors %}
+                <div class="col-3">
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">{{i.name}}</p>
+                                <p class="mentor-title">{{i.work}}</p>
+                            </div>
+                            <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+        <section class="container text-center apply-footer-btn" style="padding-bottom: 200px;">
+            <a href="/apply" class="btn-blue">Apply</a>
         </section>
     </main>
 

@@ -382,6 +382,39 @@ main::after {
 
 
 /**************** INCTUBATION PROGRAM PAGE ****************/
+.incubation-banner {
+    text-align: center;
+}
+.incubation-banner h1 {
+    padding-top: 50px;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 6.4rem;
+    letter-spacing: 0.05em;
+    color: #0B315E;
+}
+.incubation-banner h1 + span {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FF9A00;
+}
+.incubation-banner .btn-blue,
+.apply-footer-btn .btn-blue {
+    font-size: 3rem;
+    line-height: 100%;
+    background-color: #0B315E;
+    color: #FFFFFF;
+}
+.incubation-banner p {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .incubation-body {
     padding-bottom: 40px;
 }
@@ -397,10 +430,6 @@ main::after {
     color: #0B315E;
     text-align: justify;
     margin-bottom: 20px;
-}
-
-.trainers .mentor-box .mentor-desc a i {
-    opacity: 1;
 }
 
 .about.services .col-6 {
@@ -431,6 +460,18 @@ main::after {
     padding-left: 15px;
 }
 
+.trainers .mentor-box .mentor-desc a i {
+    opacity: 1;
+}
+.trainers .mentor-box .mentor-name {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+.trainers .mentor-box .mentor-title {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+}
 
 
 /**************** APPLY NOW PAGE ****************/
@@ -767,6 +808,12 @@ main::after {
 .contact input:focus-visible,
 .contact textarea:focus-visible {
     outline: 0;
+}
+.contact .text-success {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-left: 50px;
 }
 
 .map iframe {

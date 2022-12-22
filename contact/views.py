@@ -13,10 +13,8 @@ def contact(request):
         # submitted = True
         if form.is_valid():
             form.save()
-            messages.success(request, 'Qeyde alindi')
-
-            print('**************', messages)
-
+            messages.success(request, 'Mesajınız qeydə alındı.')
+            print('Form save')
         else:
             print('Form is invalid')
 

@@ -7,6 +7,10 @@
     {% block content %}
 
     <main>
+        <section class="banner">
+            <img src="{% static 'img/apply-banner.png' %}" alt="Apply now banner image">
+        </section>
+
         <section class="container application-form">
             <h2>Apply Now</h2>
             <form action="{% url 'fileapp:uploads' %}" method="post" enctype="multipart/form-data">
@@ -14,41 +18,40 @@
                 
                 <div class="form-group">
                     {{form.name_surname}}
-                    <input type="text" placeholder="Your Name and Surname" name="name">
+                    <input type="text" placeholder="Your Name and Surname" name="name" required>
                 </div>
                 <div class="form-group">
                     {{form.email}}
-                    <input type="text" placeholder="Your e-mail" name="mail">
+                    <input type="text" placeholder="Your e-mail" name="mail" required>
                 </div>
                 <div class="form-group">
                     {{form.number}}
-                    <input type="text" placeholder="Telephone" name="number">
+                    <input type="text" placeholder="Telephone" name="number" required>
                 </div>
                 <div class="form-group">
                     {{form.project_name}}
-                    <input type="text" placeholder="Project Name" name="project_name">
+                    <input type="text" placeholder="Project Name" name="project_name" required>
                 </div>
                 <div class="form-group">
                     {{form.project_des}}
-                    <textarea placeholder="Project Description" cols="30" rows="10" name="project_des"></textarea>
+                    <textarea placeholder="Project Description" cols="30" rows="10" name="project_des" required></textarea>
                 </div>
                 <div class="form-group">
                     {{form.team_members}}
-                    <textarea placeholder="Team Members" cols="30" rows="10" name="members"></textarea>
+                    <textarea placeholder="Team Members" cols="30" rows="10" name="members" required></textarea>
                 </div>
                 <div class="form-group">
                     {{form.project_level}}
-                    <textarea placeholder="What stage was the project currently in progress?" cols="30" rows="10" name="what"></textarea>
+                    <textarea placeholder="What stage was the project currently in progress?" cols="30" rows="10" name="what" required></textarea>
                 </div>
                 <div class="form-group">
                     <p>Presentation/Pitchdeck</p> 
                     {{form.file}}
-                    <input type="file" name="file">
+                    <input type="file" name="file" required>
                 </div>
                 <div class="group">
                     <button class="btn-blue" type="submit">Send a message</button>
                 </div>
-                <!-- <p class="text-success" style="margin-left: 17px;">{{messages}}</p> -->
             </form>
         </section>
     </main>
