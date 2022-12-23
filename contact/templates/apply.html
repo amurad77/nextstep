@@ -7,53 +7,155 @@
     {% block content %}
 
     <main>
-        <section class="banner">
+        <section class="banner apply-banner">
             <img src="{% static 'img/apply-banner.png' %}" alt="Apply now banner image">
+            <div class="container text-center">
+                <h2>Apply Now</h2>
+                <span>deadline: 15 january</span>
+                <p><span>Start-up incubation program 2023 batch 1.</span><br>Got an idea? We will make it happen!</p>
+                <p>The Incubation program by Next Step Innovation Center is designed to support start-upsand companies from concept to development of a workable demo (A Minimum  Viable Product).</p>
+                <a href="/incubation-program" class="btn-blue">Know&nbsp;More</a>
+            </div>
         </section>
 
         <section class="container application-form">
-            <h2>Apply Now</h2>
+            <h3>Application Questions</h3>
             <form action="{% url 'fileapp:uploads' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                
-                <div class="form-group">
-                    {{form.name_surname}}
-                    <input type="text" placeholder="Your Name and Surname" name="name" required>
+                <div class="row" id="firstpage">
+                    <div class="col-6">
+                        {{form.name_surname}}
+                        <input type="text" placeholder="First name" name="name" required>
+                        <input type="text" placeholder="Last name" name="surname" required>
+                        <label>What state is your idea / product / service in?</label>
+                        <select>
+                            <option disabled selected style="display: none;">Select an option</option>
+                            <option value="early">Early idea</option>
+                            <option value="researched">Researched idea</option>
+                            <option value="mockups">Mockups</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        {{form.email}}
+                        <input type="text" placeholder="Your e-mail" name="mail" required>
+                        {{form.number}}
+                        <input type="text" placeholder="Telephone" name="number" required>
+                        <a href="#" id="next" class="btn-blue">Continue <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    {{form.email}}
-                    <input type="text" placeholder="Your e-mail" name="mail" required>
-                </div>
-                <div class="form-group">
-                    {{form.number}}
-                    <input type="text" placeholder="Telephone" name="number" required>
-                </div>
-                <div class="form-group">
-                    {{form.project_name}}
-                    <input type="text" placeholder="Project Name" name="project_name" required>
-                </div>
-                <div class="form-group">
-                    {{form.project_des}}
-                    <textarea placeholder="Project Description" cols="30" rows="10" name="project_des" required></textarea>
-                </div>
-                <div class="form-group">
-                    {{form.team_members}}
-                    <textarea placeholder="Team Members" cols="30" rows="10" name="members" required></textarea>
-                </div>
-                <div class="form-group">
-                    {{form.project_level}}
-                    <textarea placeholder="What stage was the project currently in progress?" cols="30" rows="10" name="what" required></textarea>
-                </div>
-                <div class="form-group">
-                    <p>Presentation/Pitchdeck</p> 
-                    {{form.file}}
-                    <input type="file" name="file" required>
-                </div>
-                <div class="group">
-                    <button class="btn-blue" type="submit">Send a message</button>
+
+                <div class="row" id="secondpage" style="display: none;">
+                    <div class="col-6">
+                        <label>What field is your idea / product / service in?</label>
+                        <div id="select-list">
+                            <input type="radio" name="field" id="agritech" checked>
+                            <label for="agritech">AgriTech</label><br>
+                            <input type="radio" name="field" id="edtech">
+                            <label for="edtech">EdTech</label><br>
+                            <input type="radio" name="field" id="fintech">
+                            <label for="fintech">FinTech</label><br>
+                            <input type="radio" name="field" id="gametech">
+                            <label for="gametech">GameTech</label><br>
+                            <input type="radio" name="field" id="traveltech">
+                            <label for="traveltech">TravelTech</label><br>
+                            <input type="radio" name="field" id="cultech">
+                            <label for="cultech">CulTech</label><br>
+                            <input type="radio" name="field" id="othertech">
+                            <label for="othertech">Other</label>
+                        </div>
+                        <input type="text" id="otherinput" style="display: none;">
+
+                        <textarea placeholder="Describe your startup" required></textarea>
+                        <span class="note">Note: We look for teams with knowledge and passion in a field.</span>
+                    </div>
+                    <div class="col-6">
+                        <label>How many hours are you currently working on your idea per week?</label>
+                        <select>
+                            <option disabled selected style="display: none;">Select an option</option>
+                            <option value="max10">0-10</option>
+                            <option value="max20">11-20</option>
+                            <option value="max35">21-35</option>
+                            <option value="over36">36+</option>
+                        </select>
+
+                        <label>How many people are on your team?</label>
+                        <select>
+                            <option disabled selected style="display: none;">Select an option</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="over4">4+</option>
+                        </select>
+
+                        <label>Add more information about team members</label>
+                        <textarea required></textarea>
+                        <span class="note">Less than 100 words</span>
+                    </div>
+                    <div class="col-12" style="margin-top: 100px; margin-bottom: 20px;">
+                        <label>Select the two industries that best describe the business you are building</label>
+                    </div>
+                    <div class="col-6">
+                        <label class="yellow">Primary</label>
+                        <select>
+                            <option value="">Accounting / Finance / Legal</option>
+                            <option value="">Advertising / Marketing</option>
+                            <option value="">Agriculture / Farming</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label class="yellow">Secondary</label>
+                        <select>
+                            <option value="">Accounting / Finance / Legal</option>
+                            <option value="">Advertising / Marketing</option>
+                            <option value="">Agriculture / Farming</option>
+                        </select>
+                    </div>
+                    <div class="col-12" style="margin-top: 50px; margin-bottom: 20px;">
+                        <label>Select the two areas where you most need help building a business</label>
+                    </div>
+                    <div class="col-6">
+                        <label class="yellow">Primary</label>
+                        <select>
+                            <option value="">Basic entrepreneurial training</option>
+                            <option value="">Improving my idea / strategy</option>
+                            <option value="">Building a network</option>
+                            <option value="">Finding a Co-Founder</option>
+                            <option value="">Building a team</option>
+                            <option value="">Product development</option>
+                            <option value="">Fundraising</option>
+                            <option value="">Marketing and Sales</option>
+                            <option value="">Internationalisation</option>
+                            <option value="">Strategic Partnership</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label class="yellow">Secondary</label>
+                        <select>
+                            <option value="">Basic entrepreneurial training</option>
+                            <option value="">Improving my idea / strategy</option>
+                            <option value="">Building a network</option>
+                            <option value="">Finding a Co-Founder</option>
+                            <option value="">Building a team</option>
+                            <option value="">Product development</option>
+                            <option value="">Fundraising</option>
+                            <option value="">Marketing and Sales</option>
+                            <option value="">Internationalisation</option>
+                            <option value="">Strategic Partnership</option>
+                        </select>
+                    </div>
+                    <div class="col-3" style="margin-top: 50px;">
+                        <label>Add your startup pitch deck</label>
+                        {{form.file}}
+                        <input type="file" name="file" required>
+                    </div>
+                    <div class="col-12" style="margin-top: 50px;">
+                        <button class="btn-blue" type="submit">Submit</button>
+                    </div>
                 </div>
             </form>
         </section>
     </main>
+
+    <script src="{% static 'js/script.js' %}"></script>
 
     {% endblock %}
