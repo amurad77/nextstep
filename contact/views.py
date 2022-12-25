@@ -48,7 +48,7 @@ def apply(request):
             file = form.cleaned_data['file']
             Apply(name=name, surname=surname, email=email, number=number, what_idea=what_idea, hours=hours, idea=idea, describe=describe, people=people, more_information=more_information, industries1=industries1, industries2=industries2, areas1=areas1, areas2=areas2, file=file).save()
             
-            return HttpResponseRedirect('/apply')
+            return HttpResponseRedirect('/upload')
         else:
             print(form)
             return HttpResponse('error')
@@ -59,6 +59,9 @@ def apply(request):
             'form': ApplyForm(),
         }
         return render(request, 'apply.html', context)
+
+def upload(request):
+    return render (request, 'upload.html')
 
 # def send_files(request):
 #     if request.method == 'POST':
