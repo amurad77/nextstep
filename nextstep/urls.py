@@ -18,19 +18,11 @@ from django.urls import path, include
 from core.views import index, events, event_detail, about, incubation
 from django.conf import settings
 from django.conf.urls.static import static
-from contact.views import contact, apply, send_files
+from contact.views import contact, apply
 
 
 urlpatterns = [
-
     path('admin/', admin.site.urls),
-    path('index/', index),
-    path('events/', events),
-    path('event-detail/<slug:slug>/', event_detail, name='events_details'),
-    path('incubation-program/', incubation),
-    path('about/', about),
-    path('contact/', contact),
-    path('', include('contact.urls', namespace='fileapp'))
-    # path('apply/', apply),
-    # path('upload/', send_files),
+    path('', include('contact.urls', namespace='fileapp')),
+    path('', include('core.urls', namespace='fileappcore'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -10,7 +10,7 @@ class ContactdAdmin(admin.ModelAdmin):
 admin.site.register (Contact, ContactdAdmin)
 
 class ApplydAdmin(admin.ModelAdmin):
-    list_display = ('name_surname', 'number', 'email', 'project_name', 'project_des', 'team_members', 'project_level', 'created_at', )
-    list_filter = ('name_surname', 'created_at', 'updated_at')
-    search_fields = ('name_surname', 'created_at', 'updated_at')
+    list_display = ('name', 'surname', 'number', 'email', 'what_idea', 'hours', 'idea', 'people', 'industries1', 'industries2', 'areas1', 'areas1', 'file', 'created_at', )
+    list_filter = ('name', 'surname', 'created_at', 'updated_at')
+    search_fields = ('name', 'surname', 'created_at', 'updated_at')
 admin.site.register (Apply, ApplydAdmin)
