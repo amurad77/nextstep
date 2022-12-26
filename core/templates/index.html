@@ -90,7 +90,30 @@
             </div>
         </section>
 
-        
+        <section class="container mentors">
+            <div>
+                <h2>Mentors</h2>
+                <a href="/incubation-program">More</a>
+            </div>
+            <div class="row">
+
+                {% for i in mentors %}
+                <div class="col-4">
+                    <div class="mentor-box">
+                        <div class="mentor-img" style="background-image: url('{{i.image.url}}');"></div>
+                        <div class="mentor-desc">
+                            <div>
+                                <p class="mentor-name">{{i.name}}</p>
+                                <p class="mentor-title">{{i.work}}</p>
+                            </div>
+                            <a href="{{i.linkedin_link}}"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
     </main>
 
     {% endblock %}
