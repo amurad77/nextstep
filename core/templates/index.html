@@ -14,7 +14,7 @@
                 <div>
                     <p>Welcome to Startup World</p>
                     <h1>REALISE<br>YOUR IDEA!</h1>
-                    <a class="btn-orange" href="/incubation-program">Application Form</a>
+                    <a class="btn-orange" href="/apply">Application Form</a>
                 </div>
             </div>
         </section>
@@ -79,7 +79,7 @@
                                 <p class="news-date">{{i.created_at|date:"M"}} <span>{{i.created_at|date:"d"}}</span></p>
                                 <div class="news-desc">
                                     <p class="news-title">{{i.title}}</p>
-                                    {{i.description|safe|truncatechars:80}}
+                                    {{i.description|truncatechars:40|safe}}
                                 </div>
                             </div>
                         </div>

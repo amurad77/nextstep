@@ -6,9 +6,13 @@
     {% block title %}Success | Next Step Innovation Center{% endblock %}
     {% block content %}
 
-    <main class="container text-center" style="padding: 150px 0;">
-        <h1 class="mb-5">Your application has been accepted!</h1>
-        <a href="/" class="btn-blue">Go to home page</a>
+    <main class="container" id="upload-page">
+        <div>
+            <img src="{% static 'img/icons/rocket-spaceship.gif' %}" alt="">
+            <p>Wohoo, your request has been registered. We'd love to hear here from you!</p>
+            <p>Feel free to talk to us if you have any questions. You will receive a reply ASAP.</p>
+            <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;<a class="email" href="mailto:info@icnextstep.com">info@icnextstep.com</a></p>
+        </div>
     </main>
 
     {% endblock %}
