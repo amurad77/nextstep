@@ -727,7 +727,7 @@ main::after {
     font-weight: 400;
     line-height: 2.1rem;
 }
-.news-box .news-title {
+.news-box .news-desc .news-title {
     color: #000000;
     font-size: 1.6rem;
     font-weight: 700;
