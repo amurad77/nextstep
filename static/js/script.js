@@ -15,6 +15,15 @@ selectOption.addEventListener("change", function() {
     value = selectOption.options[selectOption.selectedIndex].value;
 });
 
+function ValidateEmail(input) {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (input.value.match(validRegex)) {
+      return true;
+    } else {
+      return false;
+    }
+}
+
 var nextBtn = document.getElementById("next");
 var firstname = document.getElementById("id_name");
 var surname = document.getElementById("id_surname");
@@ -24,7 +33,7 @@ var firstpage = document.getElementById("firstpage");
 var secondpage = document.getElementById("secondpage");
 
 nextBtn.addEventListener("click", function (e) {
-    if (firstname.value == "" || surname.value == "" || email.value == "" || number.value == "" || value == "") {
+    if (firstname.value == "" || surname.value == "" || email.value == "" || number.value == "" || value == "" || ValidateEmail(email) == false) {
         document.getElementById("alert").style.display = "inline-block";
         setTimeout(() => {
             document.getElementById("alert").style.display = "none";
