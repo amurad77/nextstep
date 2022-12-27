@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vfx&r(5%dnrbyd61&e4z34v4q8tu(wrq5&b^2kn-i14%ex&ov1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'www.icnextstep.com', 'icnextstep.com']
 
 
 # Application definition
