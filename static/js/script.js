@@ -8,7 +8,7 @@ setTimeout(function () {
     document.getElementById("id_people").setAttribute("required", "");
     document.getElementById("id_people").children[0].setAttribute("value", "");
     document.getElementById("id_people").children[0].setAttribute("disabled", "");
-    document.getElementById("id_more_information").setAttribute("maxlength", "100");
+    document.getElementById("id_more_information").setAttribute("maxlength", "600");
 }, 2000);
 
 var value = "";
