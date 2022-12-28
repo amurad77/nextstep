@@ -99,6 +99,42 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+#menu-bar {
+    display: none;
+    font-size: 2.8rem;
+    color: #0B315E;
+}
+#menu-bar i {
+    color: inherit;
+}
+
+
+/**************** MOBILE MENU ****************/
+@media screen and (max-width: 1200px) {
+    nav {
+        position: relative;
+    }
+    nav ul {
+        position: absolute;
+        top: 110px;
+        right: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 0 0 20px;
+    }
+    #menu-bar {
+        display: block;
+    }
+}
+@media screen and (max-width: 576px) {
+    nav {
+        padding: 0 20px !important;
+    }
+}
 
 
 /**************** FOOTER ****************/
