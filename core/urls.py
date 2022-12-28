@@ -7,7 +7,7 @@ from . import views
 
 
 urlpatterns = [
-    path('tinymce/', include('tinymce.urls')),
+    # path('tinymce/', include('tinymce.urls')),
 
 
     path("", views.index),

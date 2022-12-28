@@ -33,13 +33,14 @@ ALLOWED_HOSTS = ['*', 'www.icnextstep.com', 'icnextstep.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'ckeditor',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
     'contact',
-    'tinymce',
+    # 'tinymce',
     # 'geeks'
 ]
 
@@ -142,6 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
@@ -151,6 +153,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = (
     os.path.join(BASE_DIR, 'media')
 )
+# CKEDITOR_BASEPATH = "/my_static/ckeditor/ckeditor/"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
