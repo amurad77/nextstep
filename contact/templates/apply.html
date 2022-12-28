@@ -71,11 +71,6 @@
                             <label for="othertech">Other</label>
                         </div> -->
 
-                        <!-- <textarea placeholder="Describe your startup" required></textarea> -->
-                        {{form.describe}}
-                        <span class="note">Note: We look for teams with knowledge and passion in a field.</span>
-                    </div>
-                    <div class="col-6">
                         <label>How many hours are you currently working on your idea per week?</label>
                         {{form.hours}}
                         <!-- <select>
@@ -96,7 +91,11 @@
                             <option value="over4">4+</option>
                         </select> -->
 
-                        <label>Add more information about team members</label>
+                        <!-- <textarea placeholder="Describe your startup" required></textarea> -->
+                        {{form.describe}}
+                        <span class="note">Note: We look for teams with knowledge and passion in a field.</span>
+
+                        <label class="mt-5">Add more information about team members</label>
                         {{form.more_information}}
                         <!-- <textarea required></textarea> -->
                         <span class="note">Less than 100 words</span>

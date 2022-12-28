@@ -145,7 +145,10 @@ class ApplyForm(forms.Form):
                                     "rows":"5"
                                 }))
     people = forms.ChoiceField(choices=PEOPLE)
-    more_information = forms.CharField(widget=forms.Textarea(attrs={"rows":"5"}))
+    more_information = forms.CharField(widget=forms.Textarea(attrs={
+                                    "placeholder": "Name, Surname, position, experience and etc",
+                                    "rows":"5"
+                                }))
     industries1 = forms.ChoiceField(choices=INDUSTRIES)
     industries2 = forms.ChoiceField(choices=INDUSTRIES)
     areas1 = forms.ChoiceField(choices=AREAS)

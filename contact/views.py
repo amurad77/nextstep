@@ -13,7 +13,7 @@ def contact(request):
         # submitted = True
         if form.is_valid():
             form.save()
-            messages.success(request, 'Mesajınız qeydə alındı.')
+            messages.success(request, 'Thank you for your interest! We will reply to you within 2-3 working days.')
             print('Form save')
         else:
             print('Form is invalid')
