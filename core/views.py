@@ -6,11 +6,11 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def index(request):
-    mentors = Mentors.objects.all().order_by('-id')[0:][:3]
+    # mentors = Mentors.objects.all().order_by('-id')[0:][:3]
     events = Events.objects.all().order_by('-id')[0:][:3]
 
     context = {
-        'mentors': mentors,
+        # 'mentors': mentors,
         'events': events
     }
     return render(request, 'index.html', context)
