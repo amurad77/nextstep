@@ -38,7 +38,7 @@
                         <a class="link" href="https://www.linkedin.com/in/nazrinasgarzade/"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <p class="title">{{i.work}}</p>
-                    <p> {{i.description}}</p>
+                    <p> {{i.description|safe}}</p>
                 </div>
                 
             {% endfor %}
