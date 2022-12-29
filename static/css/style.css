@@ -373,6 +373,11 @@ main::after {
     main {
         margin-top: 90px;
     }
+    main::after {
+        left: 0;
+        right: 0;
+    }
+
     .partners > div {
         flex-direction: column;
     }
@@ -517,7 +522,9 @@ main::after {
     .about {
         margin-top: 0;
     }
-    .about .col-md-6 {
+    .about .col-md-6,
+    .about .col-md-5,
+    .founders h2 {
         text-align: center;
     }
     .about h2,
@@ -532,8 +539,9 @@ main::after {
         font-size: 3.5rem;
         line-height: 150%;
     }
-    .about p {
-        width: 100%;
+    .about p,
+    #about-us .about p {
+        width: 100% !important;
         padding: 0 15px;
     }
     .about .btn-blue ,
@@ -920,6 +928,38 @@ main::after {
     letter-spacing: 0.03em;
     color: #000000;
     text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    #about-us .director,
+    .founders {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #about-us .director .col-md-5 {
+        margin-bottom: 20px;
+    }
+    #about-us .col-md-4 {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    #about-us .btn-blue {
+        font-size: 1.4rem;
+        padding: 8px 0;
+    }
+
+    .founders .mentor-box {
+        text-align: left;
+    }
+    .founders .modal-header {
+        flex-direction: column;
+    }
+    .founders .modal-header .col-md-3 { order: 2; }
+    .founders .modal-header .col-md-5 { order: 3; }
+    .founders .modal-header .btn-close {
+        order: 1;
+        margin-bottom: 15px;
+    }
 }
 
 

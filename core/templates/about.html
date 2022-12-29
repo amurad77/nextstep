@@ -8,17 +8,21 @@
 
     <main id="about-us">
         <section class="banner">
-            <img src="{% static 'img/about-banner.png' %}" alt="News banner image">
+            <picture>
+                <source media="(max-width: 576px)" srcset="{% static 'img/about-banner-mobile.png' %}">
+                <img src="{% static 'img/about-banner.png' %}" alt="News banner image">
+            </picture>
+            
         </section>
 
         <section class="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-12 col-md-5">
                         <h2>About The Company</h2>
-                        <img src="{% static 'img/aboutus-section.png' %}" alt="About Us">
+                        <img src="{% static 'img/aboutus-section.png' %}" alt="About Us" class="d-none d-md-block">
                     </div>
-                    <div class="col-7">
+                    <div class="col-12 col-md-7">
                         <p>Next Step Innovation Center is designed to support start-ups and companies from concept to development of a workable demo (A Minimum Viable Product) in the Incubation Program. The company is a Startup Ecosystem supporting all of Azerbaijan and anyone who wants to connect to the Azerbaijani community. We teach best practices to early stage entrepreneurs that have a global vision and are looking to engage and grow together with partners and customers worldwide. Education and Mentorship is at the foundation of our philosophy. We support companies at the Incubation stage and provide funding to companies that graduate from the Incubation Program. For Hardware startups, we may provide a stipend to help build product. NEXT STEP Innovation Center is open to all citizens of our country. If you have original ideas and significant achievements, you are ready to present your products in the global market we will support you and help in the implementation of your projects.</p>
                     </div>
                 </div>
@@ -29,10 +33,10 @@
             <div class="row">
 
             {% for i in announcer %}
-                <div class="col-5">
+                <div class="col-12 col-md-5">
                     <img src="{{ i.image.url }}" alt="Nazrin Asgarzade">
                 </div>
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <div class="name">
                         <h3>{{i.name}}</h3>
                         <a class="link" href="https://www.linkedin.com/in/nazrinasgarzade/"><i class="fa-brands fa-linkedin"></i></a>
@@ -49,7 +53,7 @@
         <section class="container founders">
             <h2>Founders</h2>
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="mentor-box">
                         <div class="mentor-img" style="background-image: url('{% static 'img/elshad-abbasov.png' %}');"></div>
                         <div class="mentor-desc">
@@ -86,7 +90,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="mentor-box">
                         <div class="mentor-img" style="background-image: url('{% static 'img/anar-aligulov.png' %}');"></div>
                         <div class="mentor-desc">
@@ -124,7 +128,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="mentor-box">
                         <div class="mentor-img" style="background-image: url('{% static 'img/mammad-karim.png' %}');"></div>
                         <div class="mentor-desc">
