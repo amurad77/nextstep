@@ -8,7 +8,10 @@
 
     <main>
         <section class="banner apply-banner">
-            <img src="{% static 'img/apply-banner.png' %}" alt="Apply now banner image">
+            <picture>
+                <source media="(max-width: 576px)" srcset="{% static 'img/apply-banner-mobile.png' %}">
+                <img src="{% static 'img/apply-banner.png' %}" alt="Apply now banner image">
+            </picture>
             <div class="container text-center">
                 <h2>Apply Now</h2>
                 <span>deadline: 15 january</span>
@@ -23,12 +26,19 @@
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="row" id="firstpage">
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         {{form.name}}
                         <!-- <input type="text" placeholder="First name" name="name" required> -->
                         {{form.surname}}
                         <!-- <input type="text" placeholder="Last name" name="surname" required> -->
-
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{form.email}}
+                        <!-- <input type="text" placeholder="Your e-mail" name="mail" required> -->
+                        {{form.number}}
+                        <!-- <input type="text" placeholder="Telephone" name="number" required> -->
+                    </div>
+                    <div class="col-12 col-md-6">
                         <label>What state is your idea / product / service in?</label>
                         {{form.what_idea}}
                         <!-- <select>
@@ -38,20 +48,16 @@
                             <option value="mockups">Mockups</option>
                         </select> -->
                     </div>
-                    <div class="col-6">
-                        {{form.email}}
-                        <!-- <input type="text" placeholder="Your e-mail" name="mail" required> -->
-                        {{form.number}}
-                        <!-- <input type="text" placeholder="Telephone" name="number" required> -->
+                    <div class="col-12 col-md-6">
                         <a href="#" id="next" class="btn-blue">Continue <i class="fa-solid fa-arrow-right"></i></a>
-                        <div id="alert" class="alert alert-danger ms-5" role="alert" style="display: none;">
+                        <div id="alert" class="alert alert-danger" role="alert" style="display: none;">
                             Please fill out all fields correctly!
                         </div>
                     </div>
                 </div>
 
                 <div class="row" id="secondpage" style="display: none;">
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <label>What field is your idea / product / service in?</label>
                         {{form.idea}}
                         <!-- <div id="select-list">
@@ -103,7 +109,7 @@
                     <div class="col-12" style="margin-top: 100px; margin-bottom: 20px;">
                         <label>Select the two industries that best describe the business you are building</label>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <label class="yellow">Primary</label>
                         {{form.industries1}}
                         <!-- <select>
@@ -112,7 +118,7 @@
                             <option value="">Agriculture / Farming</option>
                         </select> -->
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <label class="yellow">Secondary</label>
                         {{form.industries2}}
                         <!-- <select>
@@ -124,7 +130,7 @@
                     <div class="col-12" style="margin-top: 50px; margin-bottom: 20px;">
                         <label>Select the two areas where you most need help building a business</label>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <label class="yellow">Primary</label>
                         {{form.areas1}}
                         <!-- <select>
@@ -140,7 +146,7 @@
                             <option value="">Strategic Partnership</option>
                         </select> -->
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <label class="yellow">Secondary</label>
                         {{form.areas2}}
                         <!-- <select>
@@ -156,7 +162,7 @@
                             <option value="">Strategic Partnership</option>
                         </select> -->
                     </div>
-                    <div class="col-3" style="margin-top: 50px;">
+                    <div class="col-12 col-md-3" style="margin-top: 50px;">
                         <label>Add your startup pitch deck</label>
                         {{form.file}}
                         

@@ -33,7 +33,7 @@ ul {
     color: #FFFFFF;
     font-size: 1.6rem;
     font-weight: 500;
-    line-height: 2rem;
+    line-height: 150%;
     transition: 0.5s;
 }
 .btn-orange:hover {
@@ -49,7 +49,7 @@ ul {
     border-radius: 4px;
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.8rem;
+    line-height: 150%;
     letter-spacing: 0.1em;
     background-color: #FFFFFF;
     color: #0B315E;
@@ -87,7 +87,7 @@ nav ul li {
     margin: 0 25px;
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 2.1rem;
+    line-height: 150%;
     color: #0B315E;
 }
 nav ul li:last-child {
@@ -163,7 +163,7 @@ footer h3 {
 }
 footer ul li {
     font-size: 1.8rem;
-    line-height: 2.4rem;
+    line-height: 150%;
     font-weight: 400;
 }
 footer ul li a.email {
@@ -193,6 +193,19 @@ footer .copyright p {
     text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+    footer h3,
+    footer i {
+        font-size: 2.4rem;
+    }
+    footer ul li {
+        font-size: 1.6rem;
+    }
+    footer .copyright p {
+        font-size: 1.2rem;
+    }
+}
+
 
 
 /**************** BANNER SECTION ****************/
@@ -205,7 +218,7 @@ footer .copyright p {
     color: #FF9A00;
     font-size: 6.2rem;
     font-weight: 700;
-    line-height: 7rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
 }
 .banner p {
@@ -213,7 +226,7 @@ footer .copyright p {
     padding: 80px 0;
     font-size: 2.6rem;
     font-weight: 500;
-    line-height: 4rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     color: #0B315E;
 }
@@ -249,16 +262,17 @@ footer .copyright p {
     z-index: 4;
 }
 .banner.home .banner-text p {
+    padding: 40px 0;
     color: #FF9A00;
     font-size: 2rem;
     font-weight: 600;
-    line-height: 2.4rem;
+    line-height: 150%;
 }
 .banner.home .banner-text h1 {
     color: #FFFFFF;
     font-size: 10rem;
     font-weight: 700;
-    line-height: 12rem;
+    line-height: 150%;
     margin: 15px 0 50px;
 }
 
@@ -269,29 +283,29 @@ footer .copyright p {
     }
     .banner.home .banner-text h1 {
         font-size: 7rem;
-        line-height: 8rem;
+        line-height: 150%;
     }
 }
 @media screen and (max-width: 768px) {
     .banner.home .banner-text p {
         padding: 0;
         font-size: 1.6rem;
-        line-height: 2rem;
+        line-height: 150%;
     }
     .banner.home .banner-text h1 {
         margin: 20px 0;
         font-size: 4.5rem;
-        line-height: 6rem;
+        line-height: 150%;
     }
 }
 @media screen and (max-width: 576px) {
     .banner.home .banner-text p {
         font-size: 1.4rem;
-        line-height: 1.8rem;
+        line-height: 150%;
     }
     .banner.home .banner-text h1 {
         font-size: 3rem;
-        line-height: 4rem;
+        line-height: 150%;
     }
     .banner.home .banner-text .btn-orange {
         font-size: 1.4rem;
@@ -394,7 +408,7 @@ main::after {
     width: 85%;
     margin-bottom: 40px;
     font-size: 1.8rem;
-    line-height: 2.7rem;
+    line-height: 150%;
     text-align: justify;
 }
 .about .about-img {
@@ -429,7 +443,7 @@ main::after {
     margin-right: 50px;
     font-size: 1.9rem;
     font-weight: 700;
-    line-height: 2.3rem;
+    line-height: 150%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #0B315E;
@@ -480,7 +494,7 @@ main::after {
 .mentor-box .mentor-name {
     font-size: 2.4rem;
     font-weight: 700;
-    line-height: 3rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     color: #0B315E;
     margin-bottom: 10px;
@@ -488,7 +502,7 @@ main::after {
 .mentor-box .mentor-title {
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 2.2rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     color: #0B315E;
 }
@@ -513,8 +527,10 @@ main::after {
     .trainers h2,
     .incubation-body h2,
     .application-form h2,
-    .contact h2 {
+    .contact h2,
+    .apply-banner h2 {
         font-size: 3.5rem;
+        line-height: 150%;
     }
     .about p {
         width: 100%;
@@ -544,7 +560,7 @@ main::after {
     padding-top: 50px;
     font-size: 4.2rem;
     font-weight: 700;
-    line-height: 6.4rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     color: #0B315E;
 }
@@ -557,7 +573,7 @@ main::after {
     margin-bottom: 20px;
     font-size: 2rem;
     font-weight: 500;
-    line-height: 2.4rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FF9A00;
@@ -569,21 +585,21 @@ main::after {
 .apply-banner p {
     width: 85%;
     font-size: 1.8rem;
-    line-height: 2.4rem;
+    line-height: 150%;
     margin-left: auto;
     padding: 10px 0;
     text-align: right;
 }
 .apply-banner p:nth-child(3) {
     font-size: 3.8rem;
-    line-height: 5rem;
+    line-height: 150%;
 }
 .apply-banner p span {
     font-weight: 700;
 }
 .incubation-banner .btn-blue {
     font-size: 3rem;
-    line-height: 100%;
+    line-height: 150%;
     background-color: #0B315E;
     color: #FFFFFF;
 }
@@ -603,7 +619,7 @@ main::after {
 .incubation-body ul li {
     width: 80%;
     font-size: 1.2rem;
-    line-height: 1.8rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     color: #0B315E;
     text-align: justify;
@@ -616,7 +632,7 @@ main::after {
 .about.services h4 {
     font-size: 3.2rem;
     font-weight: 500;
-    line-height: 5rem;
+    line-height: 150%;
     color: #FC682B;
     letter-spacing: 0.05em;
     text-decoration: underline;
@@ -625,7 +641,7 @@ main::after {
 .about.services td {
     width: 50%;
     font-size: 1.8rem;
-    line-height: 2.7rem;
+    line-height: 150%;
     color: #0B315E;
     letter-spacing: 0.05em;
     padding: 15px 0;
@@ -646,34 +662,49 @@ main::after {
 }
 .trainers .mentor-box .mentor-name {
     font-size: 2rem;
-    line-height: 2.4rem;
+    line-height: 150%;
 }
 .trainers .mentor-box .mentor-title {
     font-size: 1.4rem;
-    line-height: 1.8rem;
+    line-height: 150%;
 
 }
 
 @media screen and (max-width: 768px) {
     .incubation-banner h1 {
         font-size: 2rem;
-        line-height: 3rem;
+        line-height: 150%;
     }
     .incubation-banner h1 + span,
     .apply-banner h2 + span {
         font-size: 1.6rem;
-        line-height: 2rem;
+        line-height: 150%;
     }
     .incubation-banner p {
         width: 100%;
         font-size: 1.8rem;
-        line-height: 2.6rem;
+        line-height: 150%;
         padding-top: 40px;
     }
     .incubation-banner .btn-blue {
         font-size: 1.8rem;
-        line-height: 2rem;
+        line-height: 150%;
     }
+
+    .apply-banner p {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 150%;
+    }
+    .apply-banner p:nth-child(3) {
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+    .apply-banner .btn-blue {
+        font-size: 1.4rem;
+        padding: 8px 0;
+    }
+
     .incubation-body h2 {
         text-align: center;
     }
@@ -683,12 +714,12 @@ main::after {
 
     .about.services h4 {
         font-size: 1.8rem;
-        line-height: 2rem;
+        line-height: 150%;
         text-align: center;
     }
     .about.services td {
         font-size: 1.2rem;
-        line-height: 1.4rem;
+        line-height: 150%;
     }
 
     .trainers .col-57 {
@@ -706,7 +737,7 @@ main::after {
 .application-form h3 {
     font-size: 2.4rem;
     font-weight: 700;
-    line-height: 3rem;
+    line-height: 150%;
     color: #0B315E;
 }
 .application-form form {
@@ -726,7 +757,7 @@ main::after {
     border-radius: 5px;
     padding: 14px 20px;
     font-size: 1.6rem;
-    line-height: 2.2rem;
+    line-height: 150%;
     resize: none;
     transition: 0.5s;
 }
@@ -744,6 +775,16 @@ main::after {
     text-transform: none;
 }
 
+#alert {
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    #alert {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
 
 
 /**************** SINGLE MENTOR PAGE ****************/
@@ -766,7 +807,7 @@ main::after {
 .single-mentor p {
     font-size: 2.4rem;
     font-weight: 500;
-    line-height: 3.4rem;
+    line-height: 150%;
     letter-spacing: 0.03em;
     color: #000000;
 }
@@ -790,7 +831,7 @@ main::after {
     width: 85%;
     margin-bottom: 0;
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 150%;
     text-align: justify;
 }
 #about-us .name {
@@ -856,7 +897,7 @@ main::after {
 .founders .modal-header .mentor-name {
     font-size: 2.4rem;
     font-weight: 700;
-    line-height: 3rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     color: #0B315E;
     margin-bottom: 10px;
@@ -864,7 +905,7 @@ main::after {
 .founders .modal-header .mentor-title {
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 2.2rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
     color: #0B315E;
     margin-bottom: 20px;
@@ -875,7 +916,7 @@ main::after {
 }
 .founders .modal-body {
     font-size: 1.5rem;
-    line-height: 2.4rem;
+    line-height: 150%;
     letter-spacing: 0.03em;
     color: #000000;
     text-align: justify;
@@ -913,26 +954,26 @@ main::after {
     margin-right: 24px;
     color: #0B315E;
     font-size: 1.2rem;
-    line-height: 1.4rem;
+    line-height: 150%;
     font-weight: 700;
     text-align: center;
 }
 .news-box .news-date span {
     color: #FF9A00;
     font-size: 3rem;
-    line-height: 3.7rem;
+    line-height: 150%;
 }
 .news-box .news-desc p {
     color: #C0C0C0;
     font-size: 1.4rem;
     font-weight: 400;
-    line-height: 2.1rem;
+    line-height: 150%;
 }
 .news-box .news-desc .news-title {
     color: #000000;
     font-size: 1.6rem;
     font-weight: 700;
-    line-height: 2.4rem;
+    line-height: 150%;
     margin-bottom: 16px;
 }
 
@@ -955,7 +996,7 @@ main::after {
     color: #0B315E;
     font-size: 1.7rem;
     font-weight: 500;
-    line-height: 2.6rem;
+    line-height: 150%;
 }
 .event-details-body p:nth-child(2) {
     margin-top: 33px;
@@ -966,7 +1007,7 @@ main::after {
     color: #FF9A00;
     font-size: 1.7rem;
     font-weight: 500;
-    line-height: 2.6rem;
+    line-height: 150%;
 }
 
 .other-events {
@@ -982,13 +1023,13 @@ main::after {
 }
 .pagination ul {
     margin: 0 auto;
-    line-height: 4rem;
+    line-height: 150%;
 }
 .pagination ul li {
     display: inline-block;
     margin: 0 3px;
     font-size: 1.4rem !important;
-    line-height: 2rem !important;
+    line-height: 150%;
     color: #0F172A;
 }
 .pagination ul li.arrow {
@@ -1024,7 +1065,7 @@ main::after {
     width: 100%;
     padding: 14px 20px;
     font-size: 1.6rem;
-    line-height: 2.2rem;
+    line-height: 150%;
     margin-bottom: 35px;
     border: 2px solid rgba(217, 217, 217, 0.7);
     border-radius: 5px;
@@ -1056,7 +1097,7 @@ main::after {
 .application-form input[type='radio'] + label {
     margin-bottom: 10px;
     font-size: 1.6rem;
-    line-height: 2.2rem;
+    line-height: 150%;
 }
 input[type='file']::-webkit-file-upload-button {
     background-color: transparent;
@@ -1065,7 +1106,7 @@ input[type='file']::-webkit-file-upload-button {
   }
 .application-form label {
     font-size: 1.8rem;
-    line-height: 2.2rem;
+    line-height: 150%;
     color: #5F5F5F;
     margin-bottom: 10px;
 }
@@ -1084,7 +1125,7 @@ input[type='file']::-webkit-file-upload-button {
 .contact .text-success {
     display: inline-block;
     font-size: 1.6rem;
-    line-height: 2.2rem;
+    line-height: 150%;
     margin-left: 50px;
 }
 #otherinput + textarea {
@@ -1127,7 +1168,7 @@ input[type='file']::-webkit-file-upload-button {
     margin-bottom: 20px;
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 2.7rem;
+    line-height: 150%;
     color: #0B315E;
     letter-spacing: 0.02em;
 }
@@ -1136,4 +1177,18 @@ input[type='file']::-webkit-file-upload-button {
 }
 #upload-page a {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    #upload-page > div {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+        text-align: center;
+    }
+    #upload-page img {
+        height: 150px;
+    }
+    #upload-page p {
+        font-size: 1.4rem;
+    }
 }
