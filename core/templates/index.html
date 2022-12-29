@@ -9,7 +9,10 @@
 
     <main>
         <section class="banner home">
-            <img src="{% static 'img/home-banner.png' %}" alt="Home banner image">
+            <picture>
+                <source media="(max-width: 576px)" srcset="{% static 'img/home-banner-mobile.png' %}">
+                <img src="{% static 'img/home-banner.png' %}" alt="Home banner image">
+            </picture>
             <div class="banner-text container">
                 <div>
                     <p>Welcome to Startup World</p>
@@ -21,42 +24,46 @@
 
         <section class="container partners">
             <div>
-                <div class="img">
-                    <img src="{% static 'img/icons/partners_1.png' %}" alt="The Enterpreneurship">
-                </div>
-                <h3>The Enterpreneurship</h3>
-            </div>
-            <div>
-                <div class="img">
-                    <img src="{% static 'img/icons/partners_2.png' %}" alt="The Incubation">
-                </div>
-                <h3>The Incubation</h3>
-            </div>
-            <div>
-                <a href="https://sup.vc/" target="_blank">
+                <div>
                     <div class="img">
-                        <img src="{% static 'img/icons/partners_3.png' %}" alt="Acceleration by Sup.VC">
+                        <img src="{% static 'img/icons/partners_1.png' %}" alt="The Enterpreneurship">
                     </div>
-                    <h3>Acceleration by Sup.VC</h3>
-                </a>
+                    <h3>The Enterpreneurship</h3>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="{% static 'img/icons/partners_2.png' %}" alt="The Incubation">
+                    </div>
+                    <h3>The Incubation</h3>
+                </div>
             </div>
             <div>
-                <div class="img">
-                    <img src="{% static 'img/icons/partners_4.png' %}" alt="Go Global">
+                <div>
+                    <a href="https://sup.vc/" target="_blank">
+                        <div class="img">
+                            <img src="{% static 'img/icons/partners_3.png' %}" alt="Acceleration by Sup.VC">
+                        </div>
+                        <h3>Acceleration by Sup.VC</h3>
+                    </a>
                 </div>
-                <h3>Go Global</h3>
+                <div>
+                    <div class="img">
+                        <img src="{% static 'img/icons/partners_4.png' %}" alt="Go Global">
+                    </div>
+                    <h3>Go Global</h3>
+                </div>
             </div>
         </section>
 
         <section class="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <h2>About Us</h2>
                         <p>Next Step Innovation Center is designed to support start-ups and companies from concept to development of a workable demo (A Minimum Viable Product) in the Incubation Program. The company is a Startup Ecosystem supporting all of Azerbaijan and anyone who wants to connect to the Azerbaijani community.</p>
                         <a class="btn-blue" href="/about">More</a>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 d-none d-md-flex about-img">
                         <img src="{% static 'img/aboutus-section.png' %}" alt="About Us">
                     </div>
                 </div>
@@ -65,13 +72,13 @@
 
         <section class="container events">
             <div>
-                <h2>Events</h2>
-                <a href="/events">More</a>
+                <h2>News</h2>
+                <a href="/events" class="d-none d-md-block">More</a>
             </div>
             <div class="row">
 
                 {% for i in events %}
-                <div class="col-4">
+                <div class="col-12 col-lg-4 mb-4">
                     <a href="{{ i.get_absolute_url }}">
                         <div class="news-box">
                             <div class="news-img" style="background-image: url('{{i.cover_image.url}}');"></div>
@@ -87,6 +94,9 @@
                 </div>
                 {% endfor %}
 
+                <div class="col-12 text-center mt-5">
+                    <a class="btn-blue" href="/about">More</a>
+                </div>
             </div>
         </section>
 

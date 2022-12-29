@@ -73,6 +73,9 @@ header {
     right: 0;
     z-index: 10;
 }
+header .header-logo {
+    height: 50px;
+}
 nav {
     height: 100%;
     display: flex;
@@ -101,7 +104,7 @@ nav ul li a:hover {
 
 #menu-bar {
     display: none;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: #0B315E;
 }
 #menu-bar i {
@@ -116,7 +119,7 @@ nav ul li a:hover {
     }
     nav ul {
         position: absolute;
-        top: 110px;
+        top: 106px;
         right: 0;
         left: 0;
         background-color: #FFFFFF;
@@ -131,8 +134,17 @@ nav ul li a:hover {
     }
 }
 @media screen and (max-width: 576px) {
+    header {
+        height: 90px;
+    }
+    header .header-logo {
+        height: 35px;
+    }
     nav {
         padding: 0 20px !important;
+    }
+    nav ul {
+        top: 86px;
     }
 }
 
@@ -159,7 +171,7 @@ footer ul li a.email {
 }
 footer i {
     font-size: 2.8rem;
-    margin: 15px 15px 0;
+    margin: 30px 15px 0;
 }
 footer .copyright {
     margin-top: 40px;
@@ -250,6 +262,42 @@ footer .copyright p {
     margin: 15px 0 50px;
 }
 
+@media screen and (max-width: 1200px) {
+    .banner.home .banner-text p {
+        padding: 20px 0;
+        width: 100%;
+    }
+    .banner.home .banner-text h1 {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner.home .banner-text p {
+        padding: 0;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .banner.home .banner-text h1 {
+        margin: 20px 0;
+        font-size: 4.5rem;
+        line-height: 6rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    .banner.home .banner-text p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    .banner.home .banner-text h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .banner.home .banner-text .btn-orange {
+        font-size: 1.4rem;
+        padding: 8px 12px;
+    }
+}
 
 main {
     position: relative;
@@ -271,10 +319,13 @@ main::after {
 .partners {
     padding: 80px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .partners > div {
+    width: 50%;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 .partners .img {
     width: 100px;
@@ -291,7 +342,10 @@ main::after {
 .partners .img img {
     width: 100%;
 }
-.partners > div:hover .img {
+.partners > div > div {
+    margin-bottom: 40px;
+}
+.partners > div > div:hover .img {
     background-color: #0B315E;
 }
 .partners h3 {
@@ -299,6 +353,21 @@ main::after {
     font-weight: 400;
     letter-spacing: 0.1em;
     color: #0B315E;
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        margin-top: 90px;
+    }
+    .partners > div {
+        flex-direction: column;
+    }
+    .partners > div > div {
+        padding: 0 10px;
+    }
+    .partners h3 {
+        font-size: 1.4rem;
+    }
 }
 
 .about {
@@ -328,11 +397,10 @@ main::after {
     line-height: 2.7rem;
     text-align: justify;
 }
-.about .col-6:last-child {
-    display: flex;
+.about .about-img {
     align-items: flex-end;
 }
-.about .col-6:last-child img {
+.about .about-img img {
     width: 80%;
     border-radius: 13px;
 }
@@ -431,6 +499,41 @@ main::after {
     transition: 0.5s;
 }
 
+@media screen and (max-width: 768px) {
+    .about {
+        margin-top: 0;
+    }
+    .about .col-md-6 {
+        text-align: center;
+    }
+    .about h2,
+    .founders h2,
+    .events h2,
+    .mentors h2,
+    .trainers h2,
+    .incubation-body h2,
+    .application-form h2,
+    .contact h2 {
+        font-size: 3.5rem;
+    }
+    .about p {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .about .btn-blue ,
+    .events .btn-blue {
+        font-size: 1.4rem;
+        padding: 8px 0;
+    }
+
+    .events > div:first-child,
+    .mentors > div:first-child {
+        justify-content: center;
+    }
+    .events .news-desc > p:nth-child(2) {
+        overflow-wrap: anywhere;
+    }
+}
 
 
 /**************** INCTUBATION PROGRAM PAGE ****************/
