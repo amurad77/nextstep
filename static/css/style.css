@@ -654,6 +654,49 @@ main::after {
 
 }
 
+@media screen and (max-width: 768px) {
+    .incubation-banner h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .incubation-banner h1 + span,
+    .apply-banner h2 + span {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .incubation-banner p {
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        padding-top: 40px;
+    }
+    .incubation-banner .btn-blue {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    .incubation-body h2 {
+        text-align: center;
+    }
+    .incubation-body ul li {
+        width: 100%;
+    }
+
+    .about.services h4 {
+        font-size: 1.8rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    .about.services td {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .trainers .col-57 {
+        width: 100%;
+    }
+    
+}
+
 
 /**************** APPLY NOW PAGE ****************/
 .application-form {
