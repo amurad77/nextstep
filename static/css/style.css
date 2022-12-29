@@ -535,7 +535,9 @@ main::after {
     .incubation-body h2,
     .application-form h2,
     .contact h2,
-    .apply-banner h2 {
+    .apply-banner h2,
+    #news h2,
+    #event-details h2 {
         font-size: 3.5rem;
         line-height: 150%;
     }
@@ -1017,6 +1019,20 @@ main::after {
     margin-bottom: 16px;
 }
 
+@media screen and (max-width: 768px) {
+    #news .banner h2 {
+        padding: 0 0 20px;
+        text-align: center;
+    }
+    #news .col-md-4,
+    #event-details .col-md-4 {
+        margin-bottom: 20px;
+    }
+    #news .news-desc > p:nth-child(2),
+    #event-details .news-desc > p:nth-child(2) {
+        overflow-wrap: anywhere;
+    }
+}
 
 
 
@@ -1051,9 +1067,15 @@ main::after {
 }
 
 .other-events {
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
+@media screen and (max-width: 768px) {
+    .event-details-body {
+        width: 100%;
+    }
+}
 
 
 /**************** PAGINATION ****************/
