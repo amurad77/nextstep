@@ -97,11 +97,11 @@ class ContactForm(forms.ModelForm):
         )
         widgets = {
             'name': forms.TextInput(attrs={
-                                    'placeholder': 'Your Name *',
+                                    'placeholder': 'Your Name',
                                     'type': 'text'
                                 }),
             'email': forms.EmailInput(attrs={
-                                    'placeholder': 'Your Email *',
+                                    'placeholder': 'Your Email',
                                     'type': 'email'
                                 }),
             'number': forms.TextInput(attrs={

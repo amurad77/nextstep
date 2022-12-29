@@ -1203,6 +1203,15 @@ input[type='file']::-webkit-file-upload-button {
     margin: 90px 0;
 }
 
+@media screen and (max-width: 768px) {
+    .contact {
+        padding-top: 50px;
+    }
+    .contact .btn-blue {
+        font-size: 1.4rem;
+        padding: 8px 0;
+    }
+}
 
 
 /**************** UPLOAD PAGE ****************/
