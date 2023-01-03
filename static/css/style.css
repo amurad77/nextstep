@@ -646,15 +646,15 @@ main::after {
     color: #FC682B;
     letter-spacing: 0.05em;
     text-decoration: underline;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 .about.services td {
     width: 50%;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     line-height: 150%;
     color: #0B315E;
     letter-spacing: 0.05em;
-    padding: 15px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #a0a0a0;
 }
 .about.services td:nth-child(1) {
