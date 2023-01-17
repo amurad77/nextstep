@@ -63,6 +63,9 @@ def apply(request):
 def upload(request):
     return render (request, 'upload.html')
 
+def finished(request):
+    return render (request, 'finished.html')
+
 # def send_files(request):
 #     if request.method == 'POST':
 #         name_surname = request.POST.get('name')

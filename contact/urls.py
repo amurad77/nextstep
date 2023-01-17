@@ -7,7 +7,8 @@ app_name = 'fileapp'
 
 
 urlpatterns = [
-    path("apply/", views.apply),
+    path("finished/", views.finished),
+    # path("apply/", views.apply),
     path("contact/", views.contact),
     path("upload/", views.upload),
 
