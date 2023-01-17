@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% load static %}
+
+    {% block title %}Incubation Program | Next Step Innovation Center{% endblock %}
+    {% block content %}
+
+    <main class="container" id="upload-page">
+        <div>
+            <img src="{% static 'img/icons/time-is-up.gif' %}" alt="" style="transform: none;">
+            <p>Registration for this program has been closed!</p>
+            <p>Feel free to talk to us if you have any questions. You will receive a reply ASAP.</p>
+            <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;<a class="email" href="mailto:info@icnextstep.com">info@icnextstep.com</a></p>
+        </div>
+    </main>
+
+    {% endblock %}
