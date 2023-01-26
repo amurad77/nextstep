@@ -58,7 +58,7 @@ def event_detail(request, slug):
 def incubation(request):
     mentors = Mentors.objects.all().order_by('-id')
     trainers = Trainers.objects.all().order_by('-id')[0:][:5]
-    trainers_more = Trainers.objects.all().order_by('-id')[5:][:15]
+    trainers_more = Trainers.objects.all().order_by('-id')[5:][:16]
 
     context = {
         'mentors': mentors,
